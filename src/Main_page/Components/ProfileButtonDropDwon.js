@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import LoginButton from './LoginButton'
 
 function ProfileButtonDropDwon() {
   return (
     <div className="ProfileButtonDropDown">
       <LoginButton />
-      <div className="DropOption SellPage">Switch to Selling</div>
+      <Link to="/sellingPage" className="DropOption SellPage">Switch to Selling</Link>
       <div className="DropOption DeliveryPage">Switch to Delivery</div>
     </div>
   )

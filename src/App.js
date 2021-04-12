@@ -5,6 +5,7 @@ import CartPage from './Cart_Page/Components/CartPage';
 import LoginPage from './Login_page/Components/LoginPage';
 import SignUpPage from './Sign_in_page/Components/SignUpPage';
 import ProductPage from './Product_page/Components/ProductPage';
+import SellingPage from './Selling_page/Components/SellingPage';
 import React, { useState } from 'react';
 
 export const WholeContext = React.createContext()
@@ -31,10 +32,11 @@ function App() {
         }}>
           <Switch>
             <Route exact path="/" component={MainPage} />
-            <Route exact path="/cartPage" component={CartPage} />
             <Route exact path="/loginPage" component={LoginPage} />
             <Route exact path="/signUpPage" component={SignUpPage} />
             <Route exact path="/productPage" component={ProductPage} />
+            <Route exact path="/cartPage" component={CartPage} />
+            <Route exact path="/sellingPage" component={SellingPage} />
           </Switch>
         </WholeContext.Provider>
       </div>
