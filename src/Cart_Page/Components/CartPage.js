@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import BackHomeButton from '../../Main_page/Components/BackHomeButton'
 import CartPageProducts from './CartPageProducts'
 import CartPageBill from './CartPageBill'
+import CartPageAddress from './CartPageAddress'
 
 function CartPage() {
   return (
@@ -12,6 +13,7 @@ function CartPage() {
         <BackHomeButton />
       </div>
       <CartPageProducts />
+      <CartPageAddress />
       <CartPageBill />
     </div>
   )

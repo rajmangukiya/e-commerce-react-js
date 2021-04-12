@@ -109,7 +109,6 @@
 
 .CartPageBill {
   width: 60%;
-  min-height: 300px;
   border-radius: 5px;
   border: 1px solid rgb(199, 199, 199);
   display: flex;
@@ -157,7 +156,7 @@
   font-size: 17px;
   color: white;
   letter-spacing: 3px;
-  margin: 0px 0px 30px 0px;
+  margin: 0px 0px 0px 0px;
   cursor: pointer;
 }
 
@@ -167,4 +166,25 @@
 
 .CartPageBill .CartPageBillPlaceOrderButton:active {
   background-color: #ff155b;
+}
+
+.CartPageAddress {
+  width: 60%;
+  padding: 50px 0px 20px 0px;
+  border-radius: 5px;
+  border: 1px solid rgb(199, 199, 199);
+  margin: 0px 0px 50px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.CartPageAddress input {
+  margin: 0px 0px 30px 0px;
+  padding: 0px 0px 5px 5px;
+}
+
+.CartPageAddress input[type="submit"] {
+  display: none;
 }

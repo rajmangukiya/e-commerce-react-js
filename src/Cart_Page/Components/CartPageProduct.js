@@ -1,8 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { WholeContext } from '../../App'
 
 function CartPageProduct(props) {
 
   const { cartProduct } = props
+
+  const wholeState = useContext(WholeContext)
+
+  const handleCartProductRemoveButton = () => {
+    wholeState.setCartProducts(
+      wholeState.cartProducts.filter((product) => {
+         return product.id !== cartProduct.id
+      })
+    )
+    wholeState.setCartValue(prev => prev - 1)
+  }
 
   return (
     <div className="CartPageProduct">
@@ -19,7 +31,7 @@ function CartPageProduct(props) {
         <div className="CartPageProductPrice">
           Rs. {cartProduct.price * 100}
         </div>
-        <div className="CartPageProductRemoveButton">Remove</div>
+        <div onClick={handleCartProductRemoveButton} className="CartPageProductRemoveButton">Remove</div>
       </div>
     </div>
   )

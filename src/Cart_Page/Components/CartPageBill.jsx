@@ -6,6 +6,10 @@ function CartPageBill() {
 
   const wholeState = useContext(WholeContext)
 
+  const handlePlaceOrderButton = () => {
+    document.querySelector('.CartPageAddressSubmit').click()
+  }
+
   return (
     <div className="CartPageBill">
       {wholeState.cartProducts.map((product) => {
@@ -20,7 +24,7 @@ function CartPageBill() {
         .reduce((total, one) => total + one) 
         }</p>
       </div>
-      <div className="CartPageBillPlaceOrderButton">PLACE ORDER</div>
+      <div onClick={handlePlaceOrderButton} className="CartPageBillPlaceOrderButton">PLACE ORDER</div>
     </div>
   )
 }
