@@ -1,0 +1,109 @@
+.ProductPage {
+  width: 100%;
+  height: 100vh;
+}
+
+.ProductPage .ProductNavBar {
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 50px;
+  position: fixed;
+}
+
+.ProductPage .ProductNavBar .BackImage {
+  background-image: url('../../Images/back-home\ .png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.ProductView {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 100px 0px 0px 0px;
+}
+
+.ProductViewImagePart {
+  flex: 3;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.ProductViewImage {
+  max-width: 45%;
+  max-height: 1000px;
+  margin: 20px;
+  margin: 0px 20px 100px 20px;
+}
+
+.ProductViewTextPart {
+  flex: 2;
+}
+
+.ProductViewTextPart .ProductViewCategory {
+  color: rgb(60, 60, 60);
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0px 0px 0px 0px;
+}
+
+.ProductViewTextPart .ProductViewTitle {
+  width: 80%;
+  color: rgb(76, 76, 76);
+  font-size: 20px;
+  margin: 0px 0px 20px 0px;
+}
+
+.ProductViewTextPart .ProductViewPrice {
+  color: rgb(60, 60, 60);
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0px 0px 20px 0px;
+}
+
+.ProductViewTextPart .ProductViewButton {
+  background-color: #FF5588;
+  width: 80%;
+  padding: 15px 0px;
+  border-radius: 3px;
+  font-size: 15px;
+  color: white;
+  letter-spacing: 2px;
+  margin: 0px 0px 30px 0px;
+  cursor: pointer;
+}
+
+.ProductViewTextPart .ProductViewButton:hover {
+  background-color: #fb326e;
+}
+
+.ProductViewTextPart .ProductViewButton:active {
+  background-color: #ff155b;
+}
+
+.ProductViewTextPart .ProductViewDescription {
+  width: 80%;
+  color: rgb(60, 60, 60);
+  letter-spacing: 1px;
+  line-height: 25px;
+}
+
+.ProductViewTextPart .ProductViewDescription span {
+  color: rgb(60, 60, 60);
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 50px;
+}
+

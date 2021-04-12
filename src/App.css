@@ -1,38 +1,327 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  transition-duration: 0.2s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*::before, 
+*::after {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+ 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+
+
+
+
+/* Main Navigation bar start */
+
+.MainNavBar {
+  background-color: black;
+  width: 100%;
+  height: 60px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  z-index: 5;
+}
+
+.Logo {
+  color: white;
+  font-size: 40px;
+  font-style: italic;
+  letter-spacing: -5px;
+  transition-duration: 0.5s;
+  cursor:context-menu;
+}
+
+.Logo:hover {
+  transform: rotateZ(-30deg);
+}
+
+.SearchBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 30px;
+}
+
+.SearchBar select {
+  background-color: #FF5588;
+  height: 100%;
+  color: white;
+  letter-spacing: 2px;
+  padding: 0px 10px;
+  cursor: pointer;
+  border-radius: 3px 0px 0px 3px;
+}
+
+.SearchBar select:hover {
+  background-color: #ff3b76;
+}
+
+.SearchBar select:active {
+  background-color: #ff155b;
+}
+
+.SearchBar select option {
+  background-color: white;
+  color: black;
+}
+
+.SearchBar input {
+  background-color: rgb(238, 238, 238);
+  height: 100%;
+  width: 400px;
+  padding: 0px 20px;
+  color: black;
+  letter-spacing: 1px;
+}
+
+.SearchBar input:focus {
+  background-color: rgb(255, 255, 255);
+}
+
+.SearchBar button {
+  background-color: #FF5588;
+  height: 100%;
+  color: white;
+  padding: 0px 10px;
+  letter-spacing: 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 3px 3px 0px;
+}
+
+.SearchBar button:hover {
+  background-color: #ff3b76;
+}
+
+.SearchBar button:active {
+  background-color: #ff155b;
+}
+
+.SearchBar button .SearchImage {
+  background-image: url('./Images/search.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 12px;
+  height: 12px;
+  margin-right: 10px;
+}
+
+.Cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.Cart .CartImage{
+  background-image: url('./Images/shopping-cart.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  transition-duration: 1s;
+}
+
+.Cart:hover .CartImage {
+  transform: rotateZ(-360deg);
+}
+
+.Cart .OrderNumber {
+  background-color: #FF5588;
+  color: white;
+  margin: 0px 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.LoginButton {
+  color: white;
+  letter-spacing: 2px;
+}
+
+.ProfileButton {
+  position: relative;
+  height: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.ProfileButton:hover .ProfileButtonDropDown {
+  display: flex;
+} 
+
+.ProfileMainButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.ProfileMainButton:hover {
+  opacity: 0.8;
+}
+
+.ProfileButton .image {
+  background-image: url('./Images/user-nav-bar.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+}
+
+.ProfileButton p {
   color: white;
+  margin: 0px 0px 0px 10px;
+  letter-spacing: 1px;
 }
 
-.App-link {
-  color: #61dafb;
+.ProfileButtonDropDown {
+  background-color: #ffffff;
+  width: 300%;
+  position: absolute;
+  top: 60px;
+  border-radius: 0px 0px 3px 3px;
+  transition-duration: 2s;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 0px 10px 0px;
+  box-shadow: 0px 2px 5px 0px rgb(194, 194, 194);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.DropOption {
+  color: rgb(0, 0, 0);
+  padding: 10px 0px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition-duration: 0.1s;
 }
+
+.DropOption:hover {
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+}
+
+.DropOptionLine {
+  background-color: rgb(137, 137, 137);
+  height: 1px;
+  width: 80%;
+}
+
+.SellPage {
+
+}
+
+.DeliveryPage {
+
+}
+
+/* Main Navigation bar end */
+
+
+
+
+
+
+
+
+
+/* All Products start */
+
+.AllProducts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 100px 0px;
+}
+
+.Product {
+  width: 250px;
+  height: 400px;
+  margin: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.Product:hover {
+  box-shadow: 0px 0px 20px 0px rgb(220, 220, 220);
+}
+
+.Product .ProductImage {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Product .ProductImage img {
+  max-width: 80%;
+  max-height: 100%;
+}
+
+.Product .ProductCategory {
+  color: rgb(69, 69, 69);
+  font-size: 17px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  padding: 0px 0px 0px 10px;
+}
+
+.Product .ProductTitle {
+  color: rgb(104, 104, 104);
+  letter-spacing: 0px;
+  font-size: 15px;
+  width: 80%;
+  margin: 10px 0px;
+  padding: 0px 0px 0px 10px;
+  overflow: hidden;
+}
+
+.Product .ProductPrice {
+  color: rgb(69, 69, 69);
+  font-size: 17px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  padding: 0px 0px 0px 10px;
+}
+
+.BackHomeButton {
+  background-image: url('./Images/back-home\ .png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30px;
+  height: 30px  ;
+}
+
+/* All Products end */
