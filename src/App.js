@@ -31,7 +31,7 @@ function App() {
           setCartTotalPrice: setCartTotalPrice
         }}>
           <Switch>
-            <Route path="e-commerce-react-js/" component={MainPage} />
+            <Route path="/" component={MainPage} />
             <Route exact path="/loginPage" component={LoginPage} />
             <Route exact path="/signUpPage" component={SignUpPage} />
             <Route exact path="/productPage" component={ProductPage} />
