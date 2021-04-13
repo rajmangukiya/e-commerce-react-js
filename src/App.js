@@ -20,6 +20,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <h1>hiee It's working</h1>
         <WholeContext.Provider value={{
           productOnView: productOnView,
           setProductOnView: setProductOnView,
