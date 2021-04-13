@@ -34,7 +34,7 @@ function App() {
             <Route path="/" component={MainPage} />
             <Route exact path="/loginPage" component={LoginPage} />
             <Route exact path="/signUpPage" component={SignUpPage} />
-            <Route exact path="/productPage" component={ProductPage} />
+            <Route exact path="e-commerce-react-js/productPage" component={ProductPage} />
             <Route exact path="/cartPage" component={CartPage} />
             <Route exact path="/sellingPage" component={SellingPage} />
           </Switch>
