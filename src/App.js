@@ -1,6 +1,6 @@
 import './App.css';
 import MainPage from './Main_page/Components/MainPage';
-import { BrowserRouter as Router, Link, Redirect, Route, Switch } from 'react-router-dom';
+import { HashRouter, Link, Redirect, Route, Switch } from 'react-router-dom';
 import CartPage from './Cart_Page/Components/CartPage';
 import LoginPage from './Login_page/Components/LoginPage';
 import SignUpPage from './Sign_in_page/Components/SignUpPage';
@@ -18,7 +18,7 @@ function App() {
   const [cartTotalPrice, setCartTotalPrice] = useState(0)
 
   return (
-    <Router>
+    <HashRouter basename="/" >
       <div className="App">
         <WholeContext.Provider value={{
           productOnView: productOnView,
@@ -30,17 +30,15 @@ function App() {
           cartTotalPrice: cartTotalPrice,
           setCartTotalPrice: setCartTotalPrice
         }}>
-          <Switch>
-            <Route path="/" component={MainPage} />
-            <Route exact path="/loginPage" component={LoginPage} />
-            <Route exact path="/signUpPage" component={SignUpPage} />
-            <Route exact path="/productPage" component={ProductPage} />
-            <Route exact path="/cartPage" component={CartPage} />
-            <Route exact path="/sellingPage" component={SellingPage} />
-          </Switch>
+          <Route exact path="/" component={MainPage} />
+          <Route path="/loginPage" component={LoginPage} />
+          <Route path="/signUpPage" component={SignUpPage} />
+          <Route path="/productPage" component={ProductPage} />
+          <Route path="/cartPage" component={CartPage} />
+          <Route path="/sellingPage" component={SellingPage} />
         </WholeContext.Provider>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
