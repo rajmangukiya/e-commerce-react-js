@@ -32,7 +32,7 @@ function App() {
           setCartTotalPrice: setCartTotalPrice
         }}>
           <Switch>
-            <Route exact path="rajmangukiya.github.io/e-commerce-react-js/" component={MainPage} />
+            <Route exact path="/" component={MainPage} />
             <Route exact path="/loginPage" component={LoginPage} />
             <Route exact path="/signUpPage" component={SignUpPage} />
             <Route exact path="/productPage" component={ProductPage} />
